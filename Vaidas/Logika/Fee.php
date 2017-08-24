@@ -83,7 +83,6 @@ class Fee {
 				break;
 		}
 		if(trim($legal_form) == "natural") {
-		//if less that 3 times and if less than 1000€ - no fee
 			if( $count <= 3 && $amount_eur != $amount_a_week ) {
 				$former_transactions_amount = $amount_a_week - $amount_eur;
 				$discount_left = 1000 - $former_transactions_amount;
