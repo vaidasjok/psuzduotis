@@ -98,21 +98,35 @@ class Fee {
 							$fee = number_format(round_up($fee, 2), 2, '.', '');
 							break;
 						case "USD":
-							$fee = number_format(round_up($fee * USD, 2), 2, '.', '');
+							$fee = number_format(round_up($fee * USD, 3), 2, '.', '');
 							break;
 						case "JPY":
 							$fee = number_format(ceil($fee * JPY), 0, '.', '');
 							break;
 					}
 
-				} else {
+				} elseif($discount_left <= 0) {
+					$discount_left = 0;
 					$fee = ($amount_eur - $discount_left) * 0.003;
 					switch(trim($currency)) {
 						case "EUR":
 							$fee = number_format(round_up($fee, 2), 2, '.', '');
 							break;
 						case "USD":
-							$fee = number_format(round_up($fee * USD, 2), 2, '.', '');
+							$fee = number_format(round_up($fee * USD, 3), 2, '.', '');
+							break;
+						case "JPY":
+							$fee = number_format(ceil($fee * JPY), 0, '.', '');
+							break;
+					}
+				} elseif(($discount_left >0) && ($discount_left < $amount_eur)) {
+					$fee = ($amount_eur - $discount_left) * 0.003;
+					switch(trim($currency)) {
+						case "EUR":
+							$fee = number_format(round_up($fee, 2), 2, '.', '');
+							break;
+						case "USD":
+							$fee = number_format(round_up($fee * USD, 3), 2, '.', '');
 							break;
 						case "JPY":
 							$fee = number_format(ceil($fee * JPY), 0, '.', '');
