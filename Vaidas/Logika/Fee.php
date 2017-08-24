@@ -2,13 +2,16 @@
 
 class Fee {
 
+	private $i;
 
 	// gets array values for each entity in euros: count of transactions per week and amount of transactions
 	// per week.
 	public function array_get_count_and_amount_eur_a_week(array $initial_data, $id, $date, $transaction ) {
 		$count = 0;
 		(double) $amount_a_week = 0;
-		foreach($initial_data as $data) {
+		$search_array = array_slice($initial_data, 0, $this->i);
+		echo $this->i;
+		foreach($search_array as $data) {
 			if ($data[1] == $id && $transaction == $data[3]) {
 				// finding the time interval for a current week.
 				if((strtotime($data[0]) > strtotime('last monday', strtotime($date)) || strtotime($data[0]) == strtotime('monday this week', strtotime($date))) && strtotime($data[0]) <= strtotime($date) ) {
@@ -39,7 +42,9 @@ class Fee {
 // adding calculated data by array_get_count_and_amount_eur_a_week() to initial array
 	public function add_columns(array $initial_data) {
 		$result_array = [];
+		$this->i = 0;
 		foreach($initial_data as $data) {
+			$this->i++;
 			$result = $this->array_get_count_and_amount_eur_a_week($initial_data, $data[1], $data[0], $data[3]);
 		
 			array_push($data, $result[0]);
