@@ -160,6 +160,19 @@ class Fee {
 					}
 				}
 				
+			} elseif ($count > 3) {
+				$fee = $amount_eur * 0.003;
+				switch(trim($currency)) {
+					case "EUR":
+						$fee = number_format(round_up($fee, 2), 2, '.', '');
+						break;
+					case "USD":
+						$fee = number_format(round_up($fee, 2), 2, '.', '');
+						break;
+					case "JPY":
+						$fee = number_format(ceil($fee), 0, '.', '');
+						break;
+				}
 			}
 		// LEGAL
 		} elseif(trim($legal_form) == "legal") {
