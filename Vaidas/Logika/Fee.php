@@ -10,7 +10,7 @@ class Fee {
 		$count = 0;
 		(double) $amount_a_week = 0;
 		$search_array = array_slice($initial_data, 0, $this->i);
-		echo $this->i;
+		
 		foreach($search_array as $data) {
 			if ($data[1] == $id && $transaction == $data[3]) {
 				// finding the time interval for a current week.
