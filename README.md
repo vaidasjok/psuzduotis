@@ -2,9 +2,6 @@ Užduotis yra paleidžiama komandinės eilutės pagalba:
 
 > php skaiciuokle.php < input.csv
 
-Kol kas klaidingai skaičiuoja 8-9 (skaičiuojant nuo vieneto, ne nulio) elementus (komisinius).
-Ieškau klaidos, pataisęs atsiūsiu.
-
 Užduoties sprendimas atliekamas sekančiais etapais:
 
 input.csv failo duomenų pagalba sukuriamas masyvas su faile esančiais duomenimis;
