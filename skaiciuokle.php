@@ -28,7 +28,7 @@ $array_elements = $prepare->add_columns($initial_data);
 
 // ****** #DUOMENU RENGIMO PABAIGA ******
 
-echo print_r($array_elements);
+// echo print_r($array_elements);
 
 
 
