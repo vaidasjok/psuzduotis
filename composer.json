@@ -5,12 +5,15 @@
     },
     "autoload": {
     	"psr-4": {
-    		"Vaidas\\": "Vaidas/Logika"
+    		"Vaidas\\": "Vaidas/Logika/"
     	},
     	"files": [
 	    	"Vaidas/functions.php", 
 	    	"Vaidas/currencies.php"
 	    ]
+    },
+    "config": {
+        "optimize-autoloader": true
     }
 
 

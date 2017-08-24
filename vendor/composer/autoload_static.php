@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit773581312413705c33215d6f8dafecdb
+class ComposerStaticInit2113938550b3c7b14bca8724aac34d98
 {
     public static $files = array (
         '9fada244a6231933451ca98ecc57fcf6' => __DIR__ . '/../..' . '/Vaidas/functions.php',
@@ -736,10 +736,10 @@ class ComposerStaticInit773581312413705c33215d6f8dafecdb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit773581312413705c33215d6f8dafecdb::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit773581312413705c33215d6f8dafecdb::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit773581312413705c33215d6f8dafecdb::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit773581312413705c33215d6f8dafecdb::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2113938550b3c7b14bca8724aac34d98::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2113938550b3c7b14bca8724aac34d98::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit2113938550b3c7b14bca8724aac34d98::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit2113938550b3c7b14bca8724aac34d98::$classMap;
 
         }, null, ClassLoader::class);
     }
